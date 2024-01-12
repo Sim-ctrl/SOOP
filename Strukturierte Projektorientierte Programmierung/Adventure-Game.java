@@ -150,36 +150,29 @@ public class Aufgabe1 {
 	public static void main(String[] args) {
 		//gameAFS_slot1_7
 		
-		baum(gameAFS_slot1_7); //Wie man sieht, wird lediglich eine Methode baum(); mit dem 3 dimensionalen Array als Eingabe gestartet.
+		baum(gameAFS_slot1_7); 
+		//Wie man sieht, wird lediglich eine Methode baum(); mit dem 3 dimensionalen Array als Eingabe gestartet.
 		
 		}
 		
-	
+//nämlcih diese Methode wird aufgerufen:
 	public static void baum (int[][][] spielfeldArray) {
 		
-		try{
+		try{ 
+//try und catch habe ich verwendet um jeden unvorhergesehenen Fehler abzufangen um einen plötzlichen Programmabsturz zu vermeiden
 			
 		int positionY=1;
 		int standort=0;
-		int schatzzahler=0;
-		boolean falscherzug=false;
-		boolean schwert=false;
-		boolean schlüssel=false;
-		boolean drache = false;
-		boolean dracheerfüllt = false;
+		int schatzzahler=0; //Zählt die Schätze
+		boolean falscherzug=false; //
+		boolean schwert=false; //Ist ein Schwert aufgesammelt worden? Ja / Nein
+		boolean schlüssel=false; // Ist ein Schlüssel aufgesammelt worden? Ja/Nein
+		boolean drache = false; // Ob Feuer gefangen hat
+		boolean dracheerfüllt = false; //Ob begegnung mit dem Drachen erfüllt wurde -> Fuer das gewinnen des spiels
 		
 		
 		Scanner s = new Scanner (System.in);
-		//gameAFS_praII
-		//System.out.print(createTable(gameAFS_praII, gameAFS_praII.length-1, 0));
-		
-		
-		while (falscherzug==false) {
-			
-			
-			
-			
-		//try {	
+		while (falscherzug==false) { //Solange kein falscher Zug vorliegt
 		
 		System.out.println(createTable(spielfeldArray, 6, positionY));
 		System.out.println("Aktuelle Position: "+positionY);
@@ -192,10 +185,15 @@ public class Aufgabe1 {
 		//Jetzt Prüfen was/ob da was bei mehreren Zuständen an einer stelle
 
 		if (spielfeldArray[positionY-1][standort-1].length==0) {System.out.println("Schade bro, ich dachte du hast es drauf");falscherzug=true;}
+		//^Diese If schaut, ob an der gewählten stelle des SPielfeldes etwas steht (Länge muss über 0 sein). Wenn
+			//dort nichts steht, so wird das Programm änden (weil falscherzug = true gesetzt wird)
 		else {
 		int wasIstAnDemStandort =0;	
 if (spielfeldArray[positionY-1][standort-1].length==1) {
 		 wasIstAnDemStandort = spielfeldArray[positionY-1][standort-1][0];}
+
+
+			//Wenn mehrere Sachen (länge über 1 ist) dort stehen, dann muss man ja abfragen was genommen werden soll:
 if (spielfeldArray[positionY-1][standort-1].length>1) {
 	
 	int wievielewiederholungen = spielfeldArray[positionY-1][standort-1].length;
