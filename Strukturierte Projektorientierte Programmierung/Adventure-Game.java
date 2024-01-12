@@ -14,7 +14,7 @@ import java.util.*;
 //Dieses Programm steht nicht zur freien Verfügung und gehört ausschließlich sim-ctrl
 
 public class Aufgabe1 {
-		static int[][][]gameAFS_praII = {
+		static int[][][]gameAFS_praII = {      //potentielles SPielfeld
 				//x1 x2  x3 x4 x5 x6
 				{	{},{0},{},{},{},{}},	    //y 1 
 				{	{},{},{2},{5},{},{}   	},		//y2
@@ -23,10 +23,8 @@ public class Aufgabe1 {
 				{	{},{},{},{},{},{6}	    },		//y5
 				{	{},{},{},{4},{},{}	    }, 		//y6
 				{	{1},{0},{0},{0},{0},{2}	}				};
-
 		//Das kopierte Feld aus  https://gitlab.hsrw.eu/lv-programmierung/praktika-adventure-game/praktikum-ii/slot-10_00.git
-		
-		static int[][][] gameAFS_slot1_7 = {
+		static int[][][] gameAFS_slot1_7 = {     //potentielles SPielfeld
 				{{},{0,1,5},{},{},{},{},{1}},
 				{{},{},{3},{6},{},{},{}},
 				{{2},{},{},{},{},{},{}},
@@ -36,9 +34,7 @@ public class Aufgabe1 {
 				{{2},{},{},{},{},{},{}},
 				{{1},{0},{0},{2},{0},{0},{0}}			
 		};
-		
-		//gameAFS_origin
-	static int[][][] gameAFS_origin = {	
+		static int[][][] gameAFS_origin = {	//potentielles SPielfeld
 				{{},{1},{},{},{},{},{},{},{},{},{},{},{1},{},{},{}},
 				{{},{},{1},{0},{},{},{},{},{},{},{},{},{},{},{},{}},
 				{{1},{0},{},{},{},{},{},{},{},{},{},{},{},{},{},{}},			
