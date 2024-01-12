@@ -14,7 +14,7 @@ import java.util.*;
 //Dieses Programm steht nicht zur freien Verfügung und gehört ausschließlich sim-ctrl
 
 public class Aufgabe1 {
-		static int[][][]gameAFS_praII = {      //potentielles SPielfeld
+		static int[][][]gameAFS_praII = {      //potentielles Spielfeld
 				//x1 x2  x3 x4 x5 x6
 				{	{},{0},{},{},{},{}},	    //y 1 
 				{	{},{},{2},{5},{},{}   	},		//y2
@@ -24,7 +24,7 @@ public class Aufgabe1 {
 				{	{},{},{},{4},{},{}	    }, 		//y6
 				{	{1},{0},{0},{0},{0},{2}	}				};
 		//Das kopierte Feld aus  https://gitlab.hsrw.eu/lv-programmierung/praktika-adventure-game/praktikum-ii/slot-10_00.git
-		static int[][][] gameAFS_slot1_7 = {     //potentielles SPielfeld
+		static int[][][] gameAFS_slot1_7 = {     //potentielles Spielfeld
 				{{},{0,1,5},{},{},{},{},{1}},
 				{{},{},{3},{6},{},{},{}},
 				{{2},{},{},{},{},{},{}},
@@ -34,7 +34,7 @@ public class Aufgabe1 {
 				{{2},{},{},{},{},{},{}},
 				{{1},{0},{0},{2},{0},{0},{0}}			
 		};
-		static int[][][] gameAFS_origin = {	//potentielles SPielfeld
+		static int[][][] gameAFS_origin = {	//potentielles Spielfeld
 				{{},{1},{},{},{},{},{},{},{},{},{},{},{1},{},{},{}},
 				{{},{},{1},{0},{},{},{},{},{},{},{},{},{},{},{},{}},
 				{{1},{0},{},{},{},{},{},{},{},{},{},{},{},{},{},{}},			
@@ -53,6 +53,8 @@ public class Aufgabe1 {
 				{{},{},{},{},{},{},{},{},{},{},{},{6},{},{},{},{}},
 				{{1},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{2},{0},{0},{0},{0}}	};
 
+
+	//Hier male ich mir schonmal die verschiedenen Bausteine für das Feld. Je nach Zustand sieht das 2D Feld verschieden aus
 	public static String[] leer() {
 			
 			String[] leer = new String[6]; 
@@ -143,10 +145,12 @@ public class Aufgabe1 {
 		return (schatz);	}
 
 
+//Genug vorbereitet, nun ran an die Buletten: Hier der main-Teil:
+	
 	public static void main(String[] args) {
 		//gameAFS_slot1_7
 		
-		baum(gameAFS_slot1_7);
+		baum(gameAFS_slot1_7); //Wie man sieht, wird lediglich eine Methode baum(); mit dem 3 dimensionalen Array als Eingabe gestartet.
 		
 		}
 		
